@@ -32,7 +32,7 @@ h2{
   font-size: 1.5em;
 }
 
-.menu, #menu_closeIcon{
+.menu, .menu_closeIcon{
   position:fixed;
   top: 0;
   right: 0;
@@ -46,15 +46,20 @@ h2{
   display: none;
   height: 100vh;
 }
-li{
-  list-style-type: none;
-  padding: 1em 5em 1em 0.5em;
-}
-#menu_closeIcon{
+.menu_closeIcon{
   background-color: rgba(0,0,0,0);
   padding: 1em 5vw;
   border: none;
   display: none;
+}
+.menu_shown
+{
+  display: block;
+}
+
+li{
+  list-style-type: none;
+  padding: 1em 5em 1em 0.5em;
 }
 
 /*-------歡迎訊息-------*/
@@ -90,9 +95,13 @@ h3{
   margin: 0 0 calc(500px /0.9 *0.015)  0;
   padding-top: 1vh;
 }
-#extend{
+#box_hidden{
   display: none;
 }
+#box_show{
+  display: flex;
+}
+
 .box_title{
   margin: 0;
 }
@@ -113,6 +122,15 @@ h3{
   border: 0px;
   margin: 0;
 }
+
+.test {
+  color: red
+}
+
+.testClick {
+  color: yellow;
+}
+
 
 /* =======================================
   Media Quries
@@ -149,6 +167,10 @@ h3{
   }
   li{
     padding: 0 15px;
+  }
+  .menu_closeIcon
+  {
+    display: none;
   }
 }
 
